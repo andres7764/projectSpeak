@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Reader letter</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+</head>
+<style type="text/css">
+	p { font-size: 45px !important; }
+	.borders { border: 5px solid; border-color: green; }
+</style>
+<body>
+<div class="container">
+	<div class="row" style="padding-top: 45px;">
+		<div class="col-ls-12 col-xs-12">
+			<p id="texT" name="texto" style="width: 90%" >Aquí aparecerá lo que escribas</p>
+		</div>
+	</div>
+	<div style="position: fixed;right: 20px; top: 20px;background-size: cover;width: 90px; background-image: url(./img/ear.png); background-repeat: no-repeat; height: 90px" onclick="speak()"></div>
+   <div class="container" style="padding-top: 50px">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: #b70076">
+		  <p onclick="concatLet('a')" style="text-align: center;">A</p>	
+		  <span><p onclick="concatLet('b')" style="text-align: left; float: left">B</p><p onclick="concatLet('c')" style="text-align: right;">C</p></span>
+		  <p onclick="concatLet('d')" style="text-align: center;">D</p>
+		</div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: #1b2763">
+		  <p onclick="concatLet('f')" style="text-align: center;">F</p>	
+		  <span><p onclick="concatLet('e')" style="text-align: left; float: left">E</p><p onclick="concatLet('g')" style="text-align: right;">G</p></span>
+		  <p onclick="concatLet('h')" style="text-align: center;">H</p>
+		</div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: red" >
+		  <p onclick="concatLet('j')" style="text-align: center;">J</p>	
+		  <span><p onclick="concatLet('i')" style="text-align: left; float: left">I</p><p onclick="concatLet('k')" style="text-align: right;">K</p></span>
+		  <p onclick="concatLet('l')" style="text-align: center;">L</p>
+		</div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: green">
+		  <p onclick="message('')" style="text-align: center; font-size: 35px !important">ENVIAR</p>	
+		  
+		  <p onclick="removeWord()" style="text-align: center;  padding-top: 88px"><i class="glyphicon glyphicon-arrow-left"></i></p>
+		</div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: #b70076">
+		  <p onclick="concatLet('2')" style="text-align: center;">2</p>
+		  <span><p onclick="concatLet('1')" style="text-align: left; float: left">1</p><p onclick="concatLet('3')" style="text-align: right;">3</p></span>
+		  <p onclick="concatLet('4')" style="text-align: center;">4</p>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: #4957a2">
+		  <p onclick="concatLet('n')" style="text-align: center;">N</p>	
+		  <span><p onclick="concatLet('m')" style="text-align: left; float: left">M</p><p onclick="concatLet('ñ')" style="text-align: center;float: left;padding-left: 22px;">Ñ</p><p onclick="concatLet('o')" style="text-align: right;">O</p></span>
+		  <p onclick="concatLet('p')" style="text-align: center;">P</p>
+		</div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: #dcc731">
+		  <p onclick="concatLet('r')" style="text-align: center;">R</p>	
+		  <span><p onclick="concatLet('q')" style="text-align: left; float: left">Q</p><p onclick="concatLet('s')" style="text-align: right;">S</p></span>
+		  <p onclick="concatLet('t')" style="text-align: center;">T</p>
+		</div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: #822488">
+		  <p onclick="concatLet('v')" style="text-align: center;">V</p>	
+		  <span><p onclick="concatLet('u')" style="text-align: left; float: left;">U</p><p onclick="concatLet('w')" style="text-align: right;">W</p></span>
+		  <span><p onclick="concatLet('y')" style="text-align: left; float: left">Y</p><p onclick="concatLet('x')" style="text-align: center;float: left;padding-left: 22px;">X</p><p onclick="concatLet('z')" style="text-align: right;">Z</p></span>
+		</div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: green">
+		  <p onclick="concatLet(' ')" style="text-align: center; font-size: 35px !important;">ESPACIO</p>	
+
+		  <p onclick="message()" style="text-align: center; padding-top: 102px; font-size: 35px !important;">SALIR</p>
+		</div>
+		<div class="col-lg-2 col-xs-12 borders" style="padding: 20px; color: #4957a2">
+		  <p onclick="concatLet('6')" style="text-align: center;">6</p>	
+		  <span><p onclick="concatLet('5')" style="text-align: left; float: left">5</p><p onclick="concatLet('7')" style="text-align: right;">7</p></span>
+		  <span><p onclick="concatLet('9')" style="text-align: left; float: left">9</p><p onclick="concatLet('8')" style="text-align: center;float: left;padding-left: 22px;">8</p><p onclick="concatLet('0')" style="text-align: right;">0</p></span>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+  </div>	
+</div>
+</body>
+
+<script type="text/javascript" src="./js/jqueryFinal.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+<script src="http://code.responsivevoice.org/responsivevoice.js" async></script>
+</html>
